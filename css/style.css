@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.buttons {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.add-button{
+    margin-left: 10px;
+}
+.edit-button{
+    margin-left: 30px;
+}
+.delete-button{
+    margin-left: 5px;
+}
+.show-recipe-button{
+    display: block;
+    margin: 0 auto; /* Центрирование по горизонтали */
+    width: 200px; /* Ширина кнопки */
+    font-size: 16px; /* Размер шрифта */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+}
+.save-button{
+    margin-left: 10px;
+}
+
+.buttons:hover {
+    background-color: #0056b3;
+}
+

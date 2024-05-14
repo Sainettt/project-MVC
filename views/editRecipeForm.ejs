@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Recipe</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
     <h1>Edit Recipe</h1>
@@ -11,7 +12,7 @@
         <input type="text" name="name" placeholder="Recipe name" value="<%= recipe.name %>" required>
         <input type="text" name="ingredients" placeholder="Ingredients (comma-separated)" value="<%= recipe.ingredients.join(', ') %>" required>
         <textarea name="instructions" placeholder="Instructions" required><%= recipe.instructions %></textarea>
-        <button type="submit">Save Changes</button>
+        <button class="buttons save-button">Save Changes</button>
     </form>
 </body>
 </html>

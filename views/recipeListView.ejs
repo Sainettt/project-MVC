@@ -1,11 +1,10 @@
-<!-- views/recipeListView.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe List</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <h1>Recipe List</h1>
@@ -13,9 +12,9 @@
         <% recipes.forEach((recipe, index) => { %>
             <li>
                 <%= recipe.name %>
-                <a href="/recipes/<%= index %>/edit">Edit</a>
+                <a href="/recipes/<%= index %>/edit" class="buttons edit-button">Edit</a>
                 <form action="/recipes/<%= index %>" method="POST" style="display: inline;">
-                    <button type="submit">Usuń</button>
+                    <button class="buttons delete-button">Delete</button>
                 </form>
             </li>
         <% }); %>
@@ -24,7 +23,7 @@
         <input type="text" name="name" placeholder="Recipe name" required>
         <input type="text" name="ingredients" placeholder="Ingredients (comma-separated)" required>
         <textarea name="instructions" placeholder="Instructions" required></textarea>
-        <button type="submit">Add Recipe</button>
+        <button class="buttons add-button">Add Recipe</button>
     </form>
 </body>
 </html>
