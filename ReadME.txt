@@ -12,7 +12,7 @@ Przeglądanie listy przepisów na koktajle
 Dodawanie nowych przepisów
 Edycja istniejących przepisów
 Wyświetlanie szczegółowych informacji o przepisie
-Ocena i komentowanie przepisów przez użytkowników
+Usunieńcie przepisów które już jest nie potrzebne
 
    3. Instrukcje obsługi:
 
