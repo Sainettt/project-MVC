@@ -1,7 +1,16 @@
+// controllers/recipeController.js
+
+// Zamiast importować moduł z danymi, będziemy używać zwykłej tablicy
 let recipes = [];
 
 exports.getRecipes = (req, res) => {
     res.render('recipeListView', { recipes });
+};
+
+exports.getEditForm = (req, res) => {
+    const recipeIndex = req.params.index;
+    const recipe = recipes[recipeIndex];
+    res.render('editRecipeForm', { recipe, recipeIndex });
 };
 
 exports.addRecipe = (req, res) => {
@@ -11,15 +20,15 @@ exports.addRecipe = (req, res) => {
     res.redirect('/recipes');
 };
 
-exports.getEditForm = (req, res) => {
-    const recipeIndex = req.params.index;
-    const recipe = recipes[recipeIndex];
-    res.render('editRecipeForm', { recipeIndex, recipe });
-};
-
 exports.editRecipe = (req, res) => {
     const recipeIndex = req.params.index;
     const { name, ingredients, instructions } = req.body;
     recipes[recipeIndex] = { name, ingredients: ingredients.split(','), instructions };
+    res.redirect('/recipes');
+};
+
+exports.deleteRecipe = (req, res) => {
+    const recipeIndex = req.params.index;
+    recipes.splice(recipeIndex, 1);
     res.redirect('/recipes');
 };

@@ -1,3 +1,5 @@
+<!-- views/recipeListView.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,9 @@
             <li>
                 <%= recipe.name %>
                 <a href="/recipes/<%= index %>/edit">Edit</a>
+                <form action="/recipes/<%= index %>?_method=DELETE" method="DELETE" style="display: inline;">
+                    <button type="submit">Usuń</button>
+                </form>
             </li>
         <% }); %>
     </ul>
