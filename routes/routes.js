@@ -10,6 +10,6 @@ router.get('/recipes', recipeController.getRecipes);
 router.post('/recipes', recipeController.addRecipe);
 router.get('/recipes/:index/edit', recipeController.getEditForm);
 router.post('/recipes/:index/edit', recipeController.editRecipe);
-router.post('/recipes/:index', recipeController.deleteRecipe);
+router.post('/recipes/:index/delete', recipeController.deleteRecipe);
 
 module.exports = router;

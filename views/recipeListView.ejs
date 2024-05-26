@@ -13,7 +13,7 @@
             <li>
                 <%= recipe.name %>
                 <a href="/recipes/<%= index %>/edit" class="buttons edit-button">Edit</a>
-                <form action="/recipes/<%= index %>" method="POST" style="display: inline;">
+                <form action="/recipes/<%= index %>/delete" method="POST" style="display: inline;">
                     <button class="buttons delete-button">Delete</button>
                 </form>
             </li>
