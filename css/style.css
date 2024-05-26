@@ -5,6 +5,31 @@ body {
     padding: 0;
 }
 
+nav {
+    background-color: #007bff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 h1 {
     color: #333;
     text-align: center;
@@ -15,12 +40,20 @@ ul {
     padding: 0;
 }
 
-li {
-    background-color: #fff;
+li.recipe-item {
+    background-color: #f9f9f9;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-actions {
+    display: flex;
+    gap: 10px;
 }
 
 a {
@@ -29,36 +62,51 @@ a {
     margin-right: 10px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+}
+
+.form-group input, .form-group textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .buttons {
     background-color: #007bff;
     color: #fff;
     border: none;
-    align-items: center;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
+    align-self: flex-start;
 }
-.add-button{
-    margin-left: 10px;
-}
-.edit-button{
-    margin-left: 30px;
-}
-.delete-button{
-    margin-left: 5px;
-}
-.show-recipe-button{
-    display: block;
-    margin: 0 auto; /* Центрирование по горизонтали */
-    width: 200px; /* Ширина кнопки */
-    font-size: 16px; /* Размер шрифта */
-    padding: 10px 20px; /* Внутренние отступы кнопки */
-}
-.save-button{
-    margin-left: 10px;
+
+.add-button {
+    align-self: center;
 }
 
 .buttons:hover {
     background-color: #0056b3;
 }
 
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #007bff;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -7,23 +7,40 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h1>Recipe List</h1>
-    <ul>
-        <% recipes.forEach((recipe, index) => { %>
-            <li>
-                <%= recipe.name %>
-                <a href="/recipes/<%= index %>/edit" class="buttons edit-button">Edit</a>
-                <form action="/recipes/<%= index %>/delete" method="POST" style="display: inline;">
-                    <button class="buttons delete-button">Delete</button>
-                </form>
-            </li>
-        <% }); %>
-    </ul>
-    <form action="/recipes" method="POST">
-        <input type="text" name="name" placeholder="Recipe name" required>
-        <input type="text" name="ingredients" placeholder="Ingredients (comma-separated)" required>
-        <textarea name="instructions" placeholder="Instructions" required></textarea>
-        <button class="buttons add-button">Add Recipe</button>
-    </form>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/recipes">Recipes</a>
+    </nav>
+    <div class="container">
+        <h1>Recipe List</h1>
+        <ul class="recipe-list">
+            <% recipes.forEach((recipe, index) => { %>
+                <li class="recipe-item">
+                    <%= recipe.name %>
+                    <div class="recipe-actions">
+                        <a href="/recipes/<%= index %>/edit" class="buttons edit-button">Edit</a>
+                        <form action="/recipes/<%= index %>/delete" method="POST" style="display: inline;">
+                            <button class="buttons delete-button">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+        <form action="/recipes" method="POST" class="form">
+            <div class="form-group">
+                <label for="name">Recipe Name</label>
+                <input type="text" id="name" name="name" placeholder="Recipe name" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredients">Ingredients (comma-separated)</label>
+                <input type="text" id="ingredients" name="ingredients" placeholder="Ingredients (comma-separated)" required>
+            </div>
+            <div class="form-group">
+                <label for="instructions">Instructions</label>
+                <textarea id="instructions" name="instructions" placeholder="Instructions" required></textarea>
+            </div>
+            <button class="buttons add-button">Add Recipe</button>
+        </form>
+    </div>
 </body>
 </html>
